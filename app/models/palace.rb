@@ -1,0 +1,2 @@
+class Palace < ApplicationRecord
+end

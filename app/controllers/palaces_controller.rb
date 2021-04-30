@@ -1,0 +1,2 @@
+class PalacesController < ApplicationController
+end
