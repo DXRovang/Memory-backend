@@ -1,3 +1,4 @@
 class PalaceSerializer < ActiveModel::Serializer
-  attributes :id
+  attributes :id, :name
+  has_many :locis
 end

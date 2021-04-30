@@ -1,3 +1,4 @@
 class LociSerializer < ActiveModel::Serializer
-  attributes :id
+  attributes :id, :name, :item
+  belongs_to :palace
 end
