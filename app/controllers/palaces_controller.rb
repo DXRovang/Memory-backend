@@ -20,3 +20,4 @@ class PalacesController < ApplicationController
   end
 
 end
+ 
