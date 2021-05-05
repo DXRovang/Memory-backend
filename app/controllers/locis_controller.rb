@@ -16,9 +16,9 @@ class LocisController < ApplicationController
   end
 
   def update
-    # binding.pry
     loci = Loci.find_by(id: params[:id])
     loci.update(loci_params)
+    render json: loci
   end
 
   def destroy
