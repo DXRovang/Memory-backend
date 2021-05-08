@@ -1,6 +1,7 @@
 class PalacesController < ApplicationController
 
   def index
+    # include: [:locis] adds these to JSON
     render json: Palace.all
   end
 
@@ -10,7 +11,6 @@ class PalacesController < ApplicationController
   end
 
   def create
-    # binding.pry
     palace = Palace.create(palace_params)
     render json: palace
   end

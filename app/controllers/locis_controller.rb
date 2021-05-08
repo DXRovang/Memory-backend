@@ -5,9 +5,7 @@ class LocisController < ApplicationController
   end
 
   def create
-    # binding.pry
     palace = Palace.find_by(name: loci_params[:palaceName])
-    # binding.pry
     loci = Loci.new
     loci.name = loci_params[:name]
     loci.item = loci_params[:item]
