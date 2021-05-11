@@ -5,11 +5,11 @@ class LocisController < ApplicationController
   end
 
   def create
-    palace = Palace.find_by(name: loci_params[:palaceName])
-    loci = Loci.new
-    loci.name = loci_params[:name]
-    loci.item = loci_params[:item]
-    loci.palace_id = palace.id
+    palace = Palace.find_by(id: loci_params[:palace_id])
+    loci = Loci.new(loci_params)
+    # loci.name = loci_params[:name]
+    # loci.item = loci_params[:item]
+    # loci.palace_id = palace.id
     loci.save
     render json: loci
   end
@@ -33,7 +33,7 @@ class LocisController < ApplicationController
   end
 
   def loci_params
-    params.require(:loci).permit(:name, :item, :palaceName, :palace_id, :id)
+    params.require(:loci).permit(:name, :item, :palace_id, :id)
   end
 
 end
