@@ -7,9 +7,6 @@ class LocisController < ApplicationController
   def create
     palace = Palace.find_by(id: loci_params[:palace_id])
     loci = Loci.new(loci_params)
-    # loci.name = loci_params[:name]
-    # loci.item = loci_params[:item]
-    # loci.palace_id = palace.id
     loci.save
     render json: loci
   end
